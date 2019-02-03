@@ -4,6 +4,7 @@
 #include "bresenham/bresenham_line.h"
 #include "equations/line_equation.h"
 #include "bresenham/bresenham_circle.h"
+#include "equations/circle_equation.h"
 
 
 void init() {
@@ -27,6 +28,7 @@ void render() {
 
     // Clear the display
     glClear(GL_COLOR_BUFFER_BIT);
+    plotCircleEquation(320, 240, 100);
     glFlush();
 
 }
