@@ -4,7 +4,7 @@ Code for COMP269 - Computer Graphics (UFAL)
 ## Compilation
 
 ### project-1
-You will need to have *CMake* and *make* installed in your system. Then, just run the following commands:
+To compile you must have: (i) *CMake* and *make* installed in your system; and (ii) the *OpenGL/GLUT* libs installed in your system. Then, just run the following commands:
 ```
 cmake project-1/CMakeLists.txt
 make
