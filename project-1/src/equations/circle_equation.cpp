@@ -30,6 +30,8 @@
 using namespace std;
 
 
+// Plot a circle using the circle equation
+// This approach works for all the quadrants
 void plotCircleEquation(GLint x0, GLint y0, GLint radius, const string &type) {
 
     GLint x_start = x0 - radius;

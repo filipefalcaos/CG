@@ -30,48 +30,16 @@
 using namespace std;
 
 
-// Plot a line the line equation
+// Plot a line using the line equation
 // This approach works for all the quadrants
-void plotLineEquation(GLint x0, GLint y0, GLint x1, GLint y1) {
+void plotLineEquation(int x0, int y0, int x1, int y1) {
 
     GLint x, y;
-    GLint s1, s2, swap = 0, temp;
-    GLfloat coeff;
 
-    // Change the quadrant
-    if (x1 < x0) { temp = x0; x0 = x1; x1 = temp; temp = y0; y0 = y1; y1 = temp; }
-    if (y1 < y0) { y0 = -y0; y1 = -y1; swap = 1; }
-
-    if (abs(y1 - y0) < abs(x1 - x0)) {
-
-        // Calculate the line coefficient
-        coeff = (float) ((y1 - y0) / (x1 - x0));
-
-        // Calculate x and y
-        for (x = (int) x0 + 1; x < x1; x++) {
-            y = (int) (y0 + coeff * (x - x0));
-
-            if (swap) {
-                setPixel(x, -y, 2, 0.0, 0.0, 0.0);
-            } else {
-                setPixel(x, y, 2, 0.0, 0.0, 0.0);
-            }
-        }
-    } else {
-
-        // Calculate the line coefficient
-        coeff = (float) ((x1 - x0) / (y1 - y0));
-
-        // Calculate x and y
-        for (y = (int) y0 + 1; y < y1; y++) {
-            x = (int) (x0 + coeff * (y - y0));
-
-            if (swap) {
-                setPixel(x, -y, 2, 0.0, 0.0, 0.0);
-            } else {
-                setPixel(x, y, 2, 0.0, 0.0, 0.0);
-            }
-        }
+    for (double t = 0.; t < 1.; t += .001) {
+        x = (int) (x0 + (x1 - x0) * t);
+        y = (int) (y0 + (y1 - y0) * t);
+        setPixel(x, y, 2, 0.0, 0.0, 0.0);
     }
 
 }

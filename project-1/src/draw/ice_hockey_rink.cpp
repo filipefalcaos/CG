@@ -70,7 +70,7 @@ void drawRinkBresenham() {
 
 }
 
-void drawHinkEquations() {
+void drawRinkEquations() {
 
     // Render the ice hockey rink
     plotLineEquation(160, 75, 160, 575);
