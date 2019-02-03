@@ -52,9 +52,9 @@ void plotLineEquation(GLint x0, GLint y0, GLint x1, GLint y1) {
             y = (int) (y0 + coeff * (x - x0));
 
             if (swap) {
-                setPixel(x, -y);
+                setPixel(x, -y, 2, 0.0, 0.0, 0.0);
             } else {
-                setPixel(x, y);
+                setPixel(x, y, 2, 0.0, 0.0, 0.0);
             }
         }
     } else {
@@ -67,9 +67,9 @@ void plotLineEquation(GLint x0, GLint y0, GLint x1, GLint y1) {
             x = (int) (x0 + coeff * (y - y0));
 
             if (swap) {
-                setPixel(x, -y);
+                setPixel(x, -y, 2, 0.0, 0.0, 0.0);
             } else {
-                setPixel(x, y);
+                setPixel(x, y, 2, 0.0, 0.0, 0.0);
             }
         }
     }

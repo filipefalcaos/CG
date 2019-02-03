@@ -36,8 +36,6 @@ void init() {
 
     // Set for 2D
     glClearColor(1.0, 1.0, 1.0, 1.0);
-    glColor3f(0.0, 0.0, 0.0);
-    glPointSize(2);
     gluOrtho2D(0, 650, 0, 650);
 
 }
@@ -48,7 +46,7 @@ void render() {
     if (redisplay) {
 
         // Draw the clicked pixel
-        setPixel(curr_x, curr_y);
+        setPixel(curr_x, curr_y, 2, 0.0, 0.0, 0.0);
 
         if (curr_x != -1 && curr_y != -1 && last_x != -1 && last_y != -1) {
 

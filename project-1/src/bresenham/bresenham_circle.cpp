@@ -31,15 +31,15 @@ using namespace std;
 
 void plotCircle(GLint x0, GLint y0, GLint x, GLint y) {
 
-    setPixel(x0 + x, y0 + y);
-    setPixel(x0 - x, y0 + y);
-    setPixel(x0 + x, y0 - y);
-    setPixel(x0 - x, y0 - y);
+    setPixel(x0 + x, y0 + y, 2, 0.0, 0.0, 0.0);
+    setPixel(x0 - x, y0 + y, 2, 0.0, 0.0, 0.0);
+    setPixel(x0 + x, y0 - y, 2, 0.0, 0.0, 0.0);
+    setPixel(x0 - x, y0 - y, 2, 0.0, 0.0, 0.0);
 
-    setPixel(x0 + y, y0 + x);
-    setPixel(x0 - y, y0 + x);
-    setPixel(x0 + y, y0 - x);
-    setPixel(x0 - y, y0 - x);
+    setPixel(x0 + y, y0 + x, 2, 0.0, 0.0, 0.0);
+    setPixel(x0 - y, y0 + x, 2, 0.0, 0.0, 0.0);
+    setPixel(x0 + y, y0 - x, 2, 0.0, 0.0, 0.0);
+    setPixel(x0 - y, y0 - x, 2, 0.0, 0.0, 0.0);
 
 }
 
@@ -52,29 +52,29 @@ void plotSemiCircle(GLint x0, GLint y0, GLint x, GLint y, const string &type) {
     // If type is "lower-left", lower-left quarter circle
     // If type is "lower-right", lower-right quarter circle
     if (type == "upper") {
-        setPixel(x0 + x, y0 + y);
-        setPixel(x0 - x, y0 + y);
-        setPixel(x0 + y, y0 + x);
-        setPixel(x0 - y, y0 + x);
+        setPixel(x0 + x, y0 + y, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 - x, y0 + y, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 + y, y0 + x, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 - y, y0 + x, 2, 0.0, 0.0, 0.0);
     } else if (type == "lower") {
-        setPixel(x0 + x, y0 - y);
-        setPixel(x0 - x, y0 - y);
-        setPixel(x0 + y, y0 - x);
-        setPixel(x0 - y, y0 - x);
+        setPixel(x0 + x, y0 - y, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 - x, y0 - y, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 + y, y0 - x, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 - y, y0 - x, 2, 0.0, 0.0, 0.0);
     }
 
     if (type == "upper-left") {
-        setPixel(x0 - x, y0 + y);
-        setPixel(x0 - y, y0 + x);
+        setPixel(x0 - x, y0 + y, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 - y, y0 + x, 2, 0.0, 0.0, 0.0);
     } else if (type == "upper-right") {
-        setPixel(x0 + x, y0 + y);
-        setPixel(x0 + y, y0 + x);
+        setPixel(x0 + x, y0 + y, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 + y, y0 + x, 2, 0.0, 0.0, 0.0);
     } else if (type == "lower-left") {
-        setPixel(x0 - x, y0 - y);
-        setPixel(x0 - y, y0 - x);
+        setPixel(x0 - x, y0 - y, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 - y, y0 - x, 2, 0.0, 0.0, 0.0);
     } else if (type == "lower-right") {
-        setPixel(x0 + x, y0 - y);
-        setPixel(x0 + y, y0 - x);
+        setPixel(x0 + x, y0 - y, 2, 0.0, 0.0, 0.0);
+        setPixel(x0 + y, y0 - x, 2, 0.0, 0.0, 0.0);
     }
 
 }
