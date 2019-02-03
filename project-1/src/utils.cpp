@@ -21,9 +21,28 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#include <iostream>
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 
+using namespace std;
 
-// Functions defined in bresenham.cpp
-void plotLineBresenham(GLint x0, GLint y0, GLint x1, GLint y1);
+
+// Returns -1, 0, 1 depending on whether x
+// is < 0, == 0, > 0 respectively
+int sign(GLint x) {
+
+    if (x < 0) { return -1;}
+    else if (x == 0) { return 0;}
+    else { return 1;}
+
+}
+
+// Plots a point P(x,y)
+void setPixel(GLint x, GLint y) {
+
+    glBegin(GL_POINTS);
+    glVertex2i(x, y);
+    glEnd();
+
+}

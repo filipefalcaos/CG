@@ -2,6 +2,7 @@
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 #include "bresenham.h"
+#include "line_equation.h"
 
 
 void init() {
@@ -25,7 +26,6 @@ void render() {
 
     // Clear the display
     glClear(GL_COLOR_BUFFER_BIT);
-
     glFlush();
 
 }

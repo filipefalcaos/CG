@@ -22,6 +22,7 @@
  */
 
 #include <iostream>
+#include <cmath>
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 #include "utils.h"
@@ -29,56 +30,48 @@
 using namespace std;
 
 
-// Plot a line using Bresenham's algorithm
-// This approach works for all the octants
-void plotLineBresenham(GLint x0, GLint y0, GLint x1, GLint y1) {
+// Plot a line the line equation
+// This approach works for all the quadrants
+void plotLineEquation(GLint x0, GLint y0, GLint x1, GLint y1) {
 
-    GLint dx, dy, x, y;
-    GLint d_start;
+    GLint x, y;
     GLint s1, s2, swap = 0, temp;
+    GLfloat coeff;
 
-    // Set the dx and dy variables
-    dx = abs(x1 - x0);
-    dy = abs(y1 - y0);
+    // Change the quadrant
+    if (x1 < x0) { temp = x0; x0 = x1; x1 = temp; temp = y0; y0 = y1; y1 = temp; }
+    if (y1 < y0) { y0 = -y0; y1 = -y1; swap = 1; }
 
-    // Get the current octant
-    s1 = sign(x1 - x0);
-    s2 = sign(y1 - y0);
+    if (abs(y1 - y0) < abs(x1 - x0)) {
 
-    // Check if dx or dy has a greater range
-    // if dy has a greater range than dx swap dx and dy
-    if (dy > dx) { temp = dx; dx = dy; dy = temp; swap = 1; }
+        // Calculate the line coefficient
+        coeff = (float) ((y1 - y0) / (x1 - x0));
 
-    // Set the d_start parameter and the initial point
-    d_start = 2 * (dy - dx);
-    x = x0;
-    y = y0;
+        // Calculate x and y
+        for (x = (int) x0 + 1; x < x1; x++) {
+            y = (int) (y0 + coeff * (x - x0));
 
-    for (int i = 0; i < dx; i++) {
-
-        // Plot the current pixel
-        setPixel(x, y);
-
-        // Decides whether to go to E or NE
-        while (d_start >= 0) {
             if (swap) {
-                x = x + s1;
+                setPixel(x, -y);
             } else {
-                y = y + s2;
-                d_start = d_start - (2 * dx);
+                setPixel(x, y);
             }
         }
+    } else {
 
-        if (swap) {
-            y = y + s2;
-        } else {
-            x = x + s1;
+        // Calculate the line coefficient
+        coeff = (float) ((x1 - x0) / (y1 - y0));
+
+        // Calculate x and y
+        for (y = (int) y0 + 1; y < y1; y++) {
+            x = (int) (x0 + coeff * (y - y0));
+
+            if (swap) {
+                setPixel(x, -y);
+            } else {
+                setPixel(x, y);
+            }
         }
-
-        // Update the d_start
-        d_start = d_start + 2 * dy;
     }
-
-    glFlush();
 
 }

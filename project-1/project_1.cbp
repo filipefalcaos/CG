@@ -72,7 +72,19 @@
 		<Unit filename="/home/parallels/CG/project-1/src/bresenham.h">
 			<Option target="project_1"/>
 		</Unit>
+		<Unit filename="/home/parallels/CG/project-1/src/line_equation.cpp">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/CG/project-1/src/line_equation.h">
+			<Option target="project_1"/>
+		</Unit>
 		<Unit filename="/home/parallels/CG/project-1/src/main.cpp">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/CG/project-1/src/utils.cpp">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/CG/project-1/src/utils.h">
 			<Option target="project_1"/>
 		</Unit>
 		<Unit filename="/home/parallels/CG/project-1/CMakeLists.txt">
