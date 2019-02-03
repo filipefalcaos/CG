@@ -33,52 +33,54 @@ using namespace std;
 // This approach works for all the octants
 void plotLineBresenham(GLint x0, GLint y0, GLint x1, GLint y1) {
 
-    GLint dx, dy, x, y;
-    GLint d_start;
-    GLint s1, s2, swap = 0, temp;
+    // Plot the first point
+    setPixel(x0, y0);
 
-    // Set the dx and dy variables
-    dx = abs(x1 - x0);
-    dy = abs(y1 - y0);
+    // Calculate dx and dy
+    GLint dx = abs(x1 - x0);
+    GLint dy = abs(y1 - y0);
 
-    // Get the current octant
-    s1 = sign(x1 - x0);
-    s2 = sign(y1 - y0);
+    // Error variables
+    GLint xs, ys, d;
 
-    // Check if dx or dy has a greater range
-    // if dy has a greater range than dx swap dx and dy
-    if (dy > dx) { temp = dx; dx = dy; dy = temp; swap = 1; }
+    if (x1 > x0) { xs = 1; }
+    else { xs = -1; }
 
-    // Set the d_start parameter and the initial point
-    d_start = 2 * (dy - dx);
-    x = x0;
-    y = y0;
+    if (y1 > y0) { ys = 1; }
+    else { ys = -1; }
 
-    for (int i = 0; i < dx; i++) {
+    // Driving axis is the X-axis
+    if (dx >= dy) {
+        d = 2 * (dy - dx);
 
-        // Plot the current pixel
-        setPixel(x, y);
+        while (x0 != x1) {
+            x0 += xs;
 
-        // Decides whether to go to E or NE
-        while (d_start >= 0) {
-            if (swap) {
-                x = x + s1;
-            } else {
-                y = y + s2;
-                d_start = d_start - (2 * dx);
+            if (d >= 0) {
+                y0 += ys;
+                d -= 2 * dx;
             }
-        }
 
-        if (swap) {
-            y = y + s2;
-        } else {
-            x = x + s1;
+            d += 2 * dy;
+            setPixel(x0, y0);
         }
-
-        // Update the d_start
-        d_start = d_start + 2 * dy;
     }
 
-    glFlush();
+    // Driving axis is the Y-axis
+    if (dy >= dx) {
+        d = 2 * (dx - dy);
+
+        while (y0 != y1) {
+            y0 += ys;
+
+            if (d >= 0) {
+                x0 += xs;
+                d -= 2 * dy;
+            }
+
+            d += 2 * dx;
+            setPixel(x0, y0);
+        }
+    }
 
 }
