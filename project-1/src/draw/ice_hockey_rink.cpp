@@ -27,7 +27,7 @@
 #include "../equations/circle_equation.h"
 
 
-void drawHinkBresenham() {
+void drawRinkBresenham() {
 
     // Render the ice hockey rink
     plotLineBresenham(160, 75, 160, 575);

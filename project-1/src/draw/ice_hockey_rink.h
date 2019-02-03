@@ -23,5 +23,5 @@
 
 
 // Functions defined in ice_hockey_rink.cpp
-void drawHinkBresenham();
+void drawRinkBresenham();
 void drawHinkEquations();

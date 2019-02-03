@@ -22,19 +22,17 @@
  */
 
 #include <iostream>
+#include <math.h>
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 
 using namespace std;
 
 
-// Returns -1, 0, 1 depending on whether x
-// is < 0, == 0, > 0 respectively
-int sign(GLint x) {
+// Calculates the euclidean distance between a pair of points P(x,y)
+GLint euclidean_distance(GLint x0, GLint y0, GLint x1, GLint y1) {
 
-    if (x < 0) { return -1;}
-    else if (x == 0) { return 0;}
-    else { return 1;}
+    return (int) (pow(x0 - x1, 2) + pow(y0 - y1, 2));
 
 }
 
