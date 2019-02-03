@@ -23,6 +23,8 @@
 
 #include "../bresenham/bresenham_line.h"
 #include "../bresenham/bresenham_circle.h"
+#include "../equations/line_equation.h"
+#include "../equations/circle_equation.h"
 
 
 void drawHinkBresenham() {
@@ -68,8 +70,45 @@ void drawHinkBresenham() {
 
 }
 
-void drawEquation() {
+void drawHinkEquations() {
 
+    // Render the ice hockey rink
+    plotLineEquation(160, 75, 160, 575);
+    plotLineEquation(490, 75, 490, 575);
+    plotLineEquation(165, 60, 485, 60);
+    plotLineEquation(162, 585, 488, 585);
 
+    plotLineEquation(160, 325, 490, 325);
+    plotLineEquation(160, 250, 490, 250);
+    plotLineEquation(160, 400, 490, 400);
+
+    plotCircleEquation(325, 325, 45, "default");
+    plotCircleEquation(325, 325, 3, "default");
+
+    plotCircleEquation(245, 120, 45, "default");
+    plotCircleEquation(245, 120, 2, "default");
+    plotCircleEquation(405, 120, 45, "default");
+    plotCircleEquation(405, 120, 2, "default");
+
+    plotCircleEquation(245, 525, 45, "default");
+    plotCircleEquation(245, 525, 2, "default");
+    plotCircleEquation(405, 525, 45, "default");
+    plotCircleEquation(405, 525, 2, "default");
+
+    plotCircleEquation(245, 260, 2, "default");
+    plotCircleEquation(405, 260, 2, "default");
+    plotCircleEquation(245, 410, 2, "default");
+    plotCircleEquation(405, 410, 2, "default");
+
+    plotCircleEquation(325, 60, 30, "upper");
+    plotCircleEquation(325, 585, 30, "lower");
+
+    plotCircleEquation(215, 575, 55, "upper-left");
+    plotLineEquation(215, 630, 435, 630);
+    plotCircleEquation(435, 575, 55, "upper-right");
+
+    plotCircleEquation(220, 80, 60, "lower-left");
+    plotLineBresenham(215, 20, 435, 20);
+    plotCircleEquation(430, 80, 60, "lower-right");
 
 }

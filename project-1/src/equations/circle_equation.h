@@ -21,9 +21,10 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#include <string>
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 
 
 // Functions defined in circle_equation.cpp
-void plotCircleEquation(GLint x0, GLint y0, GLint radius);
+void plotCircleEquation(GLint x0, GLint y0, GLint radius, const string &type);

@@ -28,7 +28,10 @@ void render() {
     glClear(GL_COLOR_BUFFER_BIT);
 
     // Draw the ice hockey rink using Bresenham
-    drawHinkBresenham();
+//    drawHinkBresenham();
+
+    // Draw the ice hockey rink using equations
+    drawHinkEquations();
 
     // Flush commands
     glFlush();
