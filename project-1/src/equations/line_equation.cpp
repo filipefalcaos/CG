@@ -25,7 +25,7 @@
 #include <cmath>
 #include <GL/freeglut.h>
 #include <GL/gl.h>
-#include "utils.h"
+#include "../utils/utils.h"
 
 using namespace std;
 

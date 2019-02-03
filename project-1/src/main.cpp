@@ -1,8 +1,9 @@
 #include <iostream>
 #include <GL/freeglut.h>
 #include <GL/gl.h>
-#include "bresenham.h"
-#include "line_equation.h"
+#include "bresenham/bresenham_line.h"
+#include "equations/line_equation.h"
+#include "bresenham/bresenham_circle.h"
 
 
 void init() {
