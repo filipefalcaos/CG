@@ -121,11 +121,19 @@ void mouseHandler(int button, int state, int x, int y) {
 
         // Check if the point is not inside the rink
         if ((x >= x_max || x <= x_min) && (y <= y_max || y >= y_min)) {
+
+            // No points yet, set new
             if (curr_x == -1 && curr_y == -1) {
                 first_x = curr_x = x;
                 first_y = curr_y = 650 - y;
                 redisplay = true;
-            } else {
+            }
+
+            // Check if the point crosses the rink
+            else if ((curr_x <= x_min && x >= x_max) || (curr_x >= x_max && x <= x_min)) {}
+
+            // Set new point
+            else {
                 last_x = x;
                 last_y = 650 - y;
                 redisplay = true;
