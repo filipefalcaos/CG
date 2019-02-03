@@ -43,13 +43,53 @@ void plotCircle(GLint x0, GLint y0, GLint x, GLint y) {
 
 }
 
-void plotCircleBresenham(GLint x0, GLint y0, GLint radius) {
+void plotSemiCircle(GLint x0, GLint y0, GLint x, GLint y, const string &type) {
+
+    // If type is "upper", upper semi circle
+    // If type is "lower", lower semi circle
+    // If type is "upper-left", upper-left quarter circle
+    // If type is "upper-right", upper-right quarter circle
+    // If type is "lower-left", lower-left quarter circle
+    // If type is "lower-right", lower-right quarter circle
+    if (type == "upper") {
+        setPixel(x0 + x, y0 + y);
+        setPixel(x0 - x, y0 + y);
+        setPixel(x0 + y, y0 + x);
+        setPixel(x0 - y, y0 + x);
+    } else if (type == "lower") {
+        setPixel(x0 + x, y0 - y);
+        setPixel(x0 - x, y0 - y);
+        setPixel(x0 + y, y0 - x);
+        setPixel(x0 - y, y0 - x);
+    }
+
+    if (type == "upper-left") {
+        setPixel(x0 - x, y0 + y);
+        setPixel(x0 - y, y0 + x);
+    } else if (type == "upper-right") {
+        setPixel(x0 + x, y0 + y);
+        setPixel(x0 + y, y0 + x);
+    } else if (type == "lower-left") {
+        setPixel(x0 - x, y0 - y);
+        setPixel(x0 - y, y0 - x);
+    } else if (type == "lower-right") {
+        setPixel(x0 + x, y0 - y);
+        setPixel(x0 + y, y0 - x);
+    }
+
+}
+
+void plotCircleBresenham(GLint x0, GLint y0, GLint radius, const string &type) {
 
     GLint x = 0, y = radius;
     GLint d_start = 3 - 2 * radius;
 
     // Initial plot
-    plotCircle(x0, y0, x, y);
+    if (type != "default") {
+        plotSemiCircle(x0, y0, x, y, type);
+    } else {
+        plotCircle(x0, y0, x, y);
+    }
 
     while (y >= x) {
 
@@ -65,7 +105,11 @@ void plotCircleBresenham(GLint x0, GLint y0, GLint radius) {
         }
 
         // Plot the new pixels
-        plotCircle(x0, y0, x, y);
+        if (type != "default") {
+            plotSemiCircle(x0, y0, x, y, type);
+        } else {
+            plotCircle(x0, y0, x, y);
+        }
     }
 
 }

@@ -8,86 +8,104 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/parallels/CG/project-1"/>
+				<Option working_dir="/home/parallels/computer-graphics/project-1"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/parallels/CG/project-1"/>
+				<Option working_dir="/home/parallels/computer-graphics/project-1"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="project_1">
-				<Option output="/home/parallels/CG/project-1/project_1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/parallels/CG/project-1"/>
+				<Option output="/home/parallels/computer-graphics/project-1/project_1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/parallels/computer-graphics/project-1"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 project_1"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 project_1"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="project_1/fast">
-				<Option output="/home/parallels/CG/project-1/project_1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/parallels/CG/project-1"/>
+				<Option output="/home/parallels/computer-graphics/project-1/project_1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/parallels/computer-graphics/project-1"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 project_1/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 project_1/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/parallels/CG/project-1"/>
+				<Option working_dir="/home/parallels/computer-graphics/project-1"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/parallels/CG/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/parallels/computer-graphics/project-1/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/parallels/CG/project-1/src/bresenham.cpp">
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/bresenham/bresenham_circle.cpp">
 			<Option target="project_1"/>
 		</Unit>
-		<Unit filename="/home/parallels/CG/project-1/src/bresenham.h">
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/bresenham/bresenham_circle.h">
 			<Option target="project_1"/>
 		</Unit>
-		<Unit filename="/home/parallels/CG/project-1/src/line_equation.cpp">
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/bresenham/bresenham_line.cpp">
 			<Option target="project_1"/>
 		</Unit>
-		<Unit filename="/home/parallels/CG/project-1/src/line_equation.h">
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/bresenham/bresenham_line.h">
 			<Option target="project_1"/>
 		</Unit>
-		<Unit filename="/home/parallels/CG/project-1/src/main.cpp">
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/draw/ice_hockey_rink.cpp">
 			<Option target="project_1"/>
 		</Unit>
-		<Unit filename="/home/parallels/CG/project-1/src/utils.cpp">
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/draw/ice_hockey_rink.h">
 			<Option target="project_1"/>
 		</Unit>
-		<Unit filename="/home/parallels/CG/project-1/src/utils.h">
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/equations/circle_equation.cpp">
 			<Option target="project_1"/>
 		</Unit>
-		<Unit filename="/home/parallels/CG/project-1/CMakeLists.txt">
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/equations/circle_equation.h">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/equations/line_equation.cpp">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/equations/line_equation.h">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/main.cpp">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/utils/utils.cpp">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/utils/utils.h">
+			<Option target="project_1"/>
+		</Unit>
+		<Unit filename="/home/parallels/computer-graphics/project-1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
