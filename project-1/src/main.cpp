@@ -23,8 +23,7 @@
 
 #include <iostream>
 #include <string>
-#include <GL/freeglut.h>
-#include <GL/gl.h>
+#include "includes.h"
 #include "draw/ice_hockey_rink.h"
 #include "utils/utils.h"
 #include "bresenham/bresenham_line.h"

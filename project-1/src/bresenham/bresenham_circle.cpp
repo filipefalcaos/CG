@@ -22,8 +22,7 @@
  */
 
 #include <iostream>
-#include <GL/freeglut.h>
-#include <GL/gl.h>
+#include "../includes.h"
 #include "../utils/utils.h"
 
 using namespace std;

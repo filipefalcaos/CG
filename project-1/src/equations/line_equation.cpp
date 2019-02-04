@@ -23,8 +23,7 @@
 
 #include <iostream>
 #include <cmath>
-#include <GL/freeglut.h>
-#include <GL/gl.h>
+#include "../includes.h"
 #include "../utils/utils.h"
 
 using namespace std;
@@ -32,7 +31,7 @@ using namespace std;
 
 // Plot a line using the line equation
 // This approach works for all the quadrants
-void plotLineEquation(int x0, int y0, int x1, int y1) {
+void plotLineEquation(GLint x0, GLint y0, GLint x1, GLint y1) {
 
     GLint x, y;
 

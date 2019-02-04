@@ -23,8 +23,7 @@
 
 #include <iostream>
 #include <math.h>
-#include <GL/freeglut.h>
-#include <GL/gl.h>
+#include "../includes.h"
 
 using namespace std;
 

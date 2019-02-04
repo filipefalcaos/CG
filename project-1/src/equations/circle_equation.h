@@ -22,8 +22,7 @@
  */
 
 #include <string>
-#include <GL/freeglut.h>
-#include <GL/gl.h>
+#include "../includes.h"
 
 
 // Functions defined in circle_equation.cpp

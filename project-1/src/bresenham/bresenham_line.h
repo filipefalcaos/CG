@@ -21,8 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <GL/freeglut.h>
-#include <GL/gl.h>
+#include "../includes.h"
 
 
 // Functions defined in bresenham_line.cpp

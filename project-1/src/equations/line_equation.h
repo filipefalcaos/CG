@@ -21,10 +21,8 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <GL/freeglut.h>
-#include <GL/gl.h>
+#include "../includes.h"
 
 
 // Functions defined in line_equation.cpp
 void plotLineEquation(GLint x0, GLint y0, GLint x1, GLint y1);
-void line(int x0, int y0, int x1, int y1);
