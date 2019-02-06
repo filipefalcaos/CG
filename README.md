@@ -21,7 +21,7 @@ make
 ```
 
 ### flor-de-abril and translate-example
-Just run the bash script inside the script's folder:
+Just run the bash script inside the script's folder (linux only):
 ```
 bash flor-de-abril/run.sh
 ./Flor
