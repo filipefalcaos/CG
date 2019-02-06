@@ -27,16 +27,16 @@ void plotCircleEquation(GLint x0, GLint y0, GLint radius, const string &type) {
 
     for (int i = x_start; i < x_end; i++) {
         if (type == "default") {
-            setPixel(i, (int) y0 + sqrt(pow(radius, 2) - pow((i - x0), 2)), point_size, color[0], color[1], color[2]);
-            setPixel(i, (int) y0 - sqrt(pow(radius, 2) - pow((i - x0), 2)), point_size, color[0], color[1], color[2]);
+            setPixel(i, static_cast<int> (y0 + sqrt(pow(radius, 2) - pow((i - x0), 2))), point_size, color[0], color[1], color[2]);
+            setPixel(i, static_cast<int> (y0 - sqrt(pow(radius, 2) - pow((i - x0), 2))), point_size, color[0], color[1], color[2]);
         } else if (type == "upper") {
-            setPixel(i, (int) y0 + sqrt(pow(radius, 2) - pow((i - x0), 2)), point_size, color[0], color[1], color[2]);
+            setPixel(i, static_cast<int> (y0 + sqrt(pow(radius, 2) - pow((i - x0), 2))), point_size, color[0], color[1], color[2]);
         } else if (type == "lower") {
-            setPixel(i, (int) y0 - sqrt(pow(radius, 2) - pow((i - x0), 2)), point_size, color[0], color[1], color[2]);
+            setPixel(i, static_cast<int> (y0 - sqrt(pow(radius, 2) - pow((i - x0), 2))), point_size, color[0], color[1], color[2]);
         } else if (type == "lower-left" || type == "lower-right") {
-            setPixel(i, (int) y0 - sqrt(pow(radius, 2) - pow((i - x0), 2)), point_size, color[0], color[1], color[2]);
+            setPixel(i, static_cast<int> (y0 - sqrt(pow(radius, 2) - pow((i - x0), 2))), point_size, color[0], color[1], color[2]);
         } else if (type == "upper-left" || type == "upper-right") {
-            setPixel(i, (int) y0 + sqrt(pow(radius, 2) - pow((i - x0), 2)), point_size, color[0], color[1], color[2]);
+            setPixel(i, static_cast<int> (y0 + sqrt(pow(radius, 2) - pow((i - x0), 2))), point_size, color[0], color[1], color[2]);
         }
     }
 

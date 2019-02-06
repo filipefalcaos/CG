@@ -10,8 +10,9 @@
 
 using namespace std;
 
+
 // Gui variables
-GLfloat color[3] = {0, 0, 0};
+GLdouble color[3] = {0, 0, 0};
 GLint point_size = 2;
 GLint render_type = 0;
 bool clear = false;
@@ -19,7 +20,7 @@ bool clear = false;
 // New point calculation variables;
 GLint x_max = 510, x_min = 140;
 GLint y_max = 630, y_min = 20;
-pair<int, int> curr_point = {-1, -1};
+static pair<int, int> curr_point = {-1, -1};
 
 void drawRinkBresenham() {
 
@@ -108,8 +109,11 @@ void drawRinkEquations() {
 }
 
 GLWidget::GLWidget(QWidget *parent) : QGLWidget(parent) {
+
+    // Update the OpenGL env using a timer
     connect(&timer, SIGNAL(timeout()), this, SLOT(updateGL()));
     timer.start(50);
+
 }
 
 void GLWidget::initializeGL() {
@@ -125,7 +129,7 @@ void GLWidget::paintGL() {
 
     // Viewport parameters
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(color[0], color[1], color[2]);
+    glColor3d(color[0], color[1], color[2]);
     glPointSize(point_size);
 
     // Set the curr pixel in red
@@ -145,7 +149,7 @@ void GLWidget::paintGL() {
     if (render_type == 0){
 
         // Draw lines using Bresenham
-        for (int i = 0; i < points_2.size(); i++) {
+        for (unsigned int i = 0; i < points_2.size(); i++) {
             plotLineBresenham(points_1[i].first, points_1[i].second, points_2[i].first, points_2[i].second);
         }
 
@@ -156,7 +160,7 @@ void GLWidget::paintGL() {
     } else if (render_type == 1){
 
         // Draw lines using equations
-        for (int i = 0; i < points_2.size(); i++){
+        for (unsigned int i = 0; i < points_2.size(); i++){
             plotLineEquation(points_1[i].first, points_1[i].second, points_2[i].first, points_2[i].second);
         }
 
@@ -168,8 +172,6 @@ void GLWidget::paintGL() {
     glFlush();
 
 }
-
-void GLWidget::resizeGL(int w, int h){}
 
 void GLWidget::mousePressEvent(QMouseEvent *event) {
 

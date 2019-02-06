@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 // Functions defined in bresenham_circle.cpp
 void plotCircle(GLint x0, GLint y0, GLint x, GLint y);
 void plotSemiCircle(GLint x0, GLint y0, GLint x, GLint y, const string &type);

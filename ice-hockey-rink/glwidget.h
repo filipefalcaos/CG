@@ -9,7 +9,7 @@
 using namespace std;
 
 
-extern GLfloat color[3];
+extern GLdouble color[3];
 extern GLint point_size;
 extern GLint render_type;
 extern GLint x_max, x_min;
@@ -21,10 +21,9 @@ class GLWidget : public QGLWidget {
     Q_OBJECT
 
 public:
-    explicit GLWidget(QWidget *parent = 0);
+    explicit GLWidget(QWidget *parent = nullptr);
     void initializeGL();
     void paintGL();
-    void resizeGL(int w, int h);
     void mousePressEvent(QMouseEvent *event);
 
 private:

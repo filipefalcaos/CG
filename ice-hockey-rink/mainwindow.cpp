@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
 }
@@ -12,7 +13,7 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked(){
+void MainWindow::on_pushButton_clicked() {
 
     // Get the render type
     if (ui->radioButton->isChecked()) {
