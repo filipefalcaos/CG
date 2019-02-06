@@ -7,7 +7,8 @@ Code for COMP269 - Computer Graphics (UFAL)
 Ice Hockey Rink is the version of project-1 that presents a Qt GUI. To compile you must have: (i) *Qt*, *qmake* and *make* installed in your system; and (ii) the *OpenGL/GLUT* libs installed in your system. Then, just run the following commands:
 ```
 cd ice-hockey-rink
-qmake ice-hockey-rink.pro
+qmake ice-hockey-rink.pro (Linux)
+qmake ice-hockey-rink-macos.pro (MacOS)
 make
 ./ice-hockey-rink
 ```
