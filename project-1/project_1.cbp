@@ -96,6 +96,9 @@
 		<Unit filename="/home/parallels/computer-graphics/project-1/src/equations/line_equation.h">
 			<Option target="project_1"/>
 		</Unit>
+		<Unit filename="/home/parallels/computer-graphics/project-1/src/includes.h">
+			<Option target="project_1"/>
+		</Unit>
 		<Unit filename="/home/parallels/computer-graphics/project-1/src/main.cpp">
 			<Option target="project_1"/>
 		</Unit>
