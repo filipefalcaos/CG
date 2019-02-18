@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# Untracked files
+ice-hockey-rink/.qmake.stash
+ice-hockey-rink/CMakeCache.txt
+ice-hockey-rink/Makefile
+ice-hockey-rink/moc_glwidget.cpp
+ice-hockey-rink/moc_mainwindow.cpp
+ice-hockey-rink/moc_predefs.h
+ice-hockey-rink/ui_mainwindow.h
+
